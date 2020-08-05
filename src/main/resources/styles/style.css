@@ -1,0 +1,125 @@
+* {
+    /* Color definitions*/
+    accent-color: #ff9600;
+    faint-accent-color: #ff960022;
+    dark-neutral: #505050;
+    light-neutral: #E0E0E0;
+}
+
+.root {
+    -fx-accent: accent-color;
+    -fx-focus-color: accent-color;
+    -fx-faint-focus-color: faint-accent-color;
+    -fx-default-button: accent-color;
+    -fx-box-border: transparent;
+    -fx-selection-bar-non-focused: light-neutral;
+}
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar > .thumb {
+    -fx-background-color: light-neutral;
+    -fx-background-radius: 0;
+}
+
+.scroll-bar > .thumb:hover, .scroll-bar > .thumb:pressed {
+    -fx-background-color: accent-color;
+}
+
+.ui-base-view {
+    -fx-border-color: white;
+    -fx-border-width: 10 0 0 10;
+    -fx-background-color: white;
+    -fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.15) , 5,0,0,0 );
+}
+
+.close-button, .add-button, .neutral-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 12;
+    -fx-text-fill: dark-neutral;
+    -fx-padding: 0 5 0 5;
+}
+
+.glyph {
+    -fx-font-size: 14;
+    -fx-font-family: "FontAwesome";
+}
+
+.regular-font {
+    -fx-font-size: 12;
+    -fx-font-family: "System";
+}
+
+.close-button:hover {
+    -fx-text-fill: red;
+}
+
+.add-button:hover {
+    -fx-text-fill: #00E000;
+}
+
+.neutral-button:hover {
+    -fx-text-fill: accent-color;
+}
+
+.number-label{
+    -fx-background-color: dark-neutral;
+    -fx-padding: 1 6 1 6;
+    -fx-text-fill: white;
+}
+
+.headline{
+    -fx-font-size: 15;
+    -fx-background-color: transparent;
+}
+
+.big-headline {
+    -fx-font-size: 24;
+}
+
+.perspective-bar{
+    -fx-background-color: white;
+    -fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.15) , 5,0,0,0 );
+}
+
+.floating-pane{
+    -fx-background-color: white;
+    -fx-effect: dropshadow( three-pass-box, rgba(0,0,0,0.3) , 100,0,0,0 );
+}
+
+.modal-pane {
+    -fx-background-color: #000000D0;
+}
+
+.selection-list .list-cell {
+    -fx-background-color: transparent;
+}
+
+.import-executed .check-box > .box > .mark{
+    -fx-background-color: green;
+}
+
+.import-failed .check-box > .box > .mark{
+    -fx-background-color: red;
+}
+
+.control-box {
+    -fx-background-color:  #f5f5f5;
+     -fx-border-color: light-neutral;
+}
+
+.context-menu .separator:horizontal .line {
+    -fx-border-color: light-neutral transparent transparent transparent;
+}
+
+.table-view .column-header .label,
+.tree-table-view .column-header .label {
+    -fx-alignment: center_left;
+}
+
+
+ScrollPane, ScrollPane > * {
+    -fx-background-color: transparent;
+}

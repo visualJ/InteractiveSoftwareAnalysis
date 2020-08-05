@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:id="windowPane" minHeight="0.0" minWidth="0.0"
+           stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/8.0.60"
+           fx:controller="interactivesoftwareanalysis.userinterface.MainWindowController">
+    <children>
+        <BorderPane>
+            <top>
+                <VBox BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0" styleClass="perspective-bar">
+                            <children>
+                                <MenuButton fx:id="modelMenu" mnemonicParsing="false">
+                                    <graphic>
+                                        <Label styleClass="glyph" text="&#xf0c9;"/>
+                                    </graphic>
+                                    <items>
+                                        <MenuItem text="Laden" onAction="#loadModel" accelerator="Shortcut+O">
+                                            <graphic>
+                                                <Label styleClass="glyph" text="&#xf07c;"/>
+                                            </graphic>
+                                        </MenuItem>
+                                        <MenuItem text="Speichern" onAction="#saveModel" accelerator="Shortcut+S">
+                                            <graphic>
+                                                <Label styleClass="glyph" text="&#xf0c7;"/>
+                                            </graphic>
+                                        </MenuItem>
+                                        <Menu fx:id="exportMenu" mnemonicParsing="false" text="Exportieren">
+                                            <graphic>
+                                                <Label styleClass="glyph" text="&#xf064;"/>
+                                            </graphic>
+                                        </Menu>
+                                    </items>
+                                </MenuButton>
+                                <MenuButton fx:id="perspectiveMenu" text="_Perspektive">
+                                    <items>
+                                        <MenuItem onAction="#newPerspective" text="Neue Perspektive" >
+                                            <graphic>
+                                                <Label styleClass="glyph" text="&#xf067;" />
+                                            </graphic>
+                                        </MenuItem>
+                                        <SeparatorMenuItem />
+                                    </items>
+                                </MenuButton>
+                                <TextField fx:id="perspectiveName" maxWidth="1.7976931348623157E308"
+                                           promptText="Wie soll diese Perspektive heißen?" styleClass="headline"
+                                           HBox.hgrow="ALWAYS"/>
+                                <MenuButton fx:id="modulesMenu" text="_Modul hinzufügen"/>
+                            </children>
+                            <padding>
+                                <Insets left="10.0" right="10.0"/>
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308"
+                            maxWidth="1.7976931348623157E308">
+                    <content>
+                        <FlowPane fx:id="modulePane" alignment="CENTER" hgap="10.0" rowValignment="TOP" vgap="10.0">
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                        </FlowPane>
+                        <!--<RealFlowPane fx:id="modulePane" horizontalGap="10" verticalGap="10" gridWidth="300" gridHeight="300">-->
+                            <!--<padding>-->
+                                <!--<Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>-->
+                            <!--</padding>-->
+                        <!--</RealFlowPane>-->
+                    </content>
+                </ScrollPane>
+            </center>
+        </BorderPane>
+        <fx:include source="import_screen.fxml"/>
+    </children>
+</StackPane>
